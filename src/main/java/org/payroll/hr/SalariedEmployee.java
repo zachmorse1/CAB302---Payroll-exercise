@@ -7,8 +7,9 @@ public class SalariedEmployee extends Employee{
         super(name);
     }
 
-    public SalariedEmployee(String name, double payRate) {
-        super(name, payRate);
+    public SalariedEmployee(String name, double salary) {
+        super(name);
+        this.salary = salary;
     }
 
     @Override
