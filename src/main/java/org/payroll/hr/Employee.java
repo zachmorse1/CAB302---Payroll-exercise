@@ -12,12 +12,50 @@ public abstract class Employee {
         this.name = name;
     }
 
-    public Employee(String name, Double )
+    public Employee(String name, double payRate) {
+        this.name = name;
+        this.payRate = payRate;
+        EMPLOYEE_ID = getNextID();
+    }
 
     public static int getNextID() {
         int id = nextID;
         nextID++;
         return id;
+    }
+
+    public int getEMPLOYEE_ID() {
+        return this.EMPLOYEE_ID;
+    }
+
+    public double getPayRate() {
+        return this.payRate;
+    }
+
+    public void displayAddress() {
+        System.out.println(address.toString());
+    }
+
+    public void setAddress(Address address) {
+        this.address = address;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setPayRate(double payRate) {
+        this.payRate = payRate;
+    }
+
+    public String getName() {
+        return this.name;
+    }
+
+    @Override
+    public String toString(){
+        return "Employee ID - " + this.EMPLOYEE_ID + "\nName - " +this.name
+                + "\n" + this.address.toString();
     }
 }
 
