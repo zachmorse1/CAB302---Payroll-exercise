@@ -24,4 +24,12 @@ public class SalariedEmployee extends Employee{
                 "\n\t" + "Gross Salary $" + this.salary +
                 "\n\t" + "Net Salary $" + calculatePay() + "\n\n";
     }
+
+    @Override
+    public String toString() {
+        return String.format("\n\tName: " + this.getName() +
+                "\n\tGross Salary $" + this.salary +
+                "\n\tNet Salary $%.2f", calculatePay());
+
+    }
 }

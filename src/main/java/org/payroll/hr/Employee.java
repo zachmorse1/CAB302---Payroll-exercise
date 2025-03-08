@@ -56,8 +56,7 @@ public abstract class Employee implements Payable {
 
     @Override
     public String toString(){
-        return "Employee ID - " + this.EMPLOYEE_ID + "\nName - " +this.name
-                + "\n" + this.address.toString();
+        return "Employee ID - " + this.EMPLOYEE_ID + "\nName - " +this.name + "\n" + this.address.toString();
     }
 }
 

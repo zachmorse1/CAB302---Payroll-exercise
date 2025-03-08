@@ -24,4 +24,11 @@ public class HourlyEmployee extends Employee {
                 "\n\t" + "Hours \t " + this.hoursWorked +
                 "\n\t" + "Total Days Payment $" + this.calculatePay();
     }
+
+    @Override
+    public String toString() {
+        return "\t\t\t" + "\n\t" + "Name: " + this.getName() +
+                "\n\t" + "Hours \t " + this.hoursWorked +
+                "\n\t" + "Total Days Payment $" + this.calculatePay();
+    }
 }
