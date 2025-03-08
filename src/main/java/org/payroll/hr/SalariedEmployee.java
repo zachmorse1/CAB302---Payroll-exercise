@@ -12,12 +12,15 @@ public class SalariedEmployee extends Employee{
     }
 
     @Override
-    public double CalculatePay() {
-        return 0;
+    public double calculatePay() {
+        return salary - (salary * .3);
     }
 
     @Override
     public String generatePayStub(String payDate) {
-        return "";
+        return "\t\t\t" + "\n\t" + "Name: " + this.getName() + " - Employee Id: " + this.getEMPLOYEE_ID() +
+                "\n\t" + "Pay Date \t " + payDate +
+                "\n\t" + "Gross Salary $" + this.salary +
+                "\n\t" + "Net Salary $" + calculatePay() + "\n\n";
     }
 }
