@@ -1,6 +1,6 @@
 package org.payroll.hr;
 
-public abstract class Employee {
+public abstract class Employee implements Payable {
     private String name;
     private double payRate;
     private final int EMPLOYEE_ID;
@@ -10,6 +10,8 @@ public abstract class Employee {
 
     public Employee(String name) {
         this.name = name;
+        EMPLOYEE_ID = getNextID();
+        payRate = STARTING_PAY_RATE;
     }
 
     public Employee(String name, double payRate) {
