@@ -7,7 +7,10 @@ public class Address {
     private String postCode;
 
     public Address(String street, String city, String state, String postCode){
-
+        this.street = street;
+        this.city = city;
+        this.state = state;
+        this.postCode = postCode;
     }
 
     @Override
